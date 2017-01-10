@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "294854132f281ee616638e21e64c9781",
+    "hash": "f1f24d54758d2a79f638ff80b2ad841c",
+    "content-hash": "b30ffaf0b89ceba0f9f9dad90904ad2f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -72,7 +73,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2015-08-31T12:32:49+00:00"
+            "time": "2015-08-31 12:32:49"
         },
         {
             "name": "doctrine/cache",
@@ -142,7 +143,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-10-29T11:16:17+00:00"
+            "time": "2016-10-29 11:16:17"
         },
         {
             "name": "doctrine/collections",
@@ -208,7 +209,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14T22:21:58+00:00"
+            "time": "2015-04-14 22:21:58"
         },
         {
             "name": "doctrine/common",
@@ -281,7 +282,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2016-11-30T16:50:46+00:00"
+            "time": "2016-11-30 16:50:46"
         },
         {
             "name": "doctrine/dbal",
@@ -352,7 +353,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-09-09T19:13:33+00:00"
+            "time": "2016-09-09 19:13:33"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -433,7 +434,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2016-08-10T15:35:22+00:00"
+            "time": "2016-08-10 15:35:22"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -521,7 +522,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-01-26T17:28:51+00:00"
+            "time": "2016-01-26 17:28:51"
         },
         {
             "name": "doctrine/inflector",
@@ -588,7 +589,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06T14:35:42+00:00"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "doctrine/instantiator",
@@ -642,7 +643,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14T21:17:01+00:00"
+            "time": "2015-06-14 21:17:01"
         },
         {
             "name": "doctrine/lexer",
@@ -696,7 +697,81 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09T13:34:57+00:00"
+            "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "doctrine/migrations",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/migrations.git",
+                "reference": "c81147c0f2938a6566594455367e095150547f72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/c81147c0f2938a6566594455367e095150547f72",
+                "reference": "c81147c0f2938a6566594455367e095150547f72",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.2",
+                "ocramius/proxy-manager": "^1.0|^2.0",
+                "php": "^5.5|^7.0",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "dev-master",
+                "doctrine/orm": "2.*",
+                "jdorn/sql-formatter": "~1.1",
+                "johnkary/phpunit-speedtrap": "~1.0@dev",
+                "mikey179/vfsstream": "^1.6",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "~4.7",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "suggest": {
+                "jdorn/sql-formatter": "Allows to generate formatted SQL with the diff command."
+            },
+            "bin": [
+                "bin/doctrine-migrations"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "v1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\Migrations\\": "lib/Doctrine/DBAL/Migrations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Michael Simonson",
+                    "email": "contact@mikesimonson.com"
+                }
+            ],
+            "description": "Database Schema migrations using Doctrine DBAL",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "migrations"
+            ],
+            "time": "2016-12-25 22:54:00"
         },
         {
             "name": "doctrine/orm",
@@ -772,7 +847,83 @@
                 "database",
                 "orm"
             ],
-            "time": "2016-09-10T18:51:13+00:00"
+            "time": "2016-09-10 18:51:13"
+        },
+        {
+            "name": "friendsofsymfony/user-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+                "reference": "e889095060584db187784d4b6e2d1efcff2de242"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/e889095060584db187784d4b6e2d1efcff2de242",
+                "reference": "e889095060584db187784d4b6e2d1efcff2de242",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "^1 || ^2",
+                "php": "^5.5.9 || ^7.0",
+                "symfony/form": "^2.7 || ^3.0",
+                "symfony/framework-bundle": "^2.7 || ^3.0",
+                "symfony/security-bundle": "^2.7 || ^3.0",
+                "symfony/templating": "^2.7 || ^3.0",
+                "symfony/twig-bundle": "^2.7 || ^3.0"
+            },
+            "conflict": {
+                "doctrine/doctrine-bundle": "<1.3",
+                "symfony/doctrine-bridge": "<2.7"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "^1.3",
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpunit/phpunit": "~4.8|~5.0",
+                "swiftmailer/swiftmailer": "^4.3 || ^5.0",
+                "symfony/console": "^2.7 || ^3.0",
+                "symfony/phpunit-bridge": "^2.7 || ^3.0",
+                "symfony/validator": "^2.7 || ^3.0",
+                "symfony/yaml": "^2.7 || ^3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FOS\\UserBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                },
+                {
+                    "name": "Thibault Duplessis",
+                    "email": "thibault.duplessis@gmail.com"
+                }
+            ],
+            "description": "Symfony FOSUserBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "User management"
+            ],
+            "time": "2017-01-10 14:18:45"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -823,7 +974,7 @@
             "keywords": [
                 "parameters management"
             ],
-            "time": "2015-11-10T17:04:01+00:00"
+            "time": "2015-11-10 17:04:01"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -873,7 +1024,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2014-01-12T16:20:24+00:00"
+            "time": "2014-01-12 16:20:24"
         },
         {
             "name": "monolog/monolog",
@@ -951,7 +1102,187 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-26T00:15:39+00:00"
+            "time": "2016-11-26 00:15:39"
+        },
+        {
+            "name": "ocramius/package-versions",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/PackageVersions.git",
+                "reference": "51e867c70f0799790b3e82276875414ce13daaca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/51e867c70f0799790b3e82276875414ce13daaca",
+                "reference": "51e867c70f0799790b3e82276875414ce13daaca",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": "~7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.3",
+                "ext-zip": "*",
+                "phpunit/phpunit": "^5.4.7"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PackageVersions\\Installer",
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PackageVersions\\": "src/PackageVersions"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
+            "time": "2016-12-30 09:49:15"
+        },
+        {
+            "name": "ocramius/proxy-manager",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/ProxyManager.git",
+                "reference": "a55d08229f4f614bf335759ed0cf63378feeb2e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/a55d08229f4f614bf335759ed0cf63378feeb2e6",
+                "reference": "a55d08229f4f614bf335759ed0cf63378feeb2e6",
+                "shasum": ""
+            },
+            "require": {
+                "ocramius/package-versions": "^1.0",
+                "php": "7.0.0 - 7.0.5 || ^7.0.7",
+                "zendframework/zend-code": "3.0.0 - 3.0.2 || ^3.0.4"
+            },
+            "require-dev": {
+                "couscous/couscous": "^1.4.0",
+                "ext-phar": "*",
+                "phpbench/phpbench": "^0.11.2",
+                "phpunit/phpunit": "^5.4.6",
+                "squizlabs/php_codesniffer": "^2.6.0"
+            },
+            "suggest": {
+                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
+                "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
+                "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
+                "zendframework/zend-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ProxyManager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.io/"
+                }
+            ],
+            "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
+            "homepage": "https://github.com/Ocramius/ProxyManager",
+            "keywords": [
+                "aop",
+                "lazy loading",
+                "proxy",
+                "proxy pattern",
+                "service proxies"
+            ],
+            "time": "2016-11-04 15:53:15"
+        },
+        {
+            "name": "pagerfanta/pagerfanta",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/Pagerfanta.git",
+                "reference": "f846c5e06bb66df659a688ea4734aab49de589d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/f846c5e06bb66df659a688ea4734aab49de589d6",
+                "reference": "f846c5e06bb66df659a688ea4734aab49de589d6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.3",
+                "doctrine/phpcr-odm": "1.*",
+                "jackalope/jackalope-doctrine-dbal": "1.*",
+                "jmikola/geojson": "~1.0",
+                "mandango/mandango": "~1.0@dev",
+                "mandango/mondator": "~1.0@dev",
+                "phpunit/phpunit": "~4 | ~5",
+                "propel/propel1": "~1.6",
+                "ruflin/elastica": "~1.3",
+                "solarium/solarium": "~3.1"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "To use the DoctrineODMMongoDBAdapter.",
+                "doctrine/orm": "To use the DoctrineORMAdapter.",
+                "doctrine/phpcr-odm": "To use the DoctrineODMPhpcrAdapter. >= 1.1.0",
+                "mandango/mandango": "To use the MandangoAdapter.",
+                "propel/propel1": "To use the PropelAdapter",
+                "solarium/solarium": "To use the SolariumAdapter."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pagerfanta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com"
+                }
+            ],
+            "description": "Pagination for PHP 5.3",
+            "keywords": [
+                "page",
+                "pagination",
+                "paginator",
+                "paging"
+            ],
+            "time": "2016-11-28 09:17:04"
         },
         {
             "name": "paragonie/random_compat",
@@ -999,7 +1330,184 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-11-07T23:38:38+00:00"
+            "time": "2016-11-07 23:38:38"
+        },
+        {
+            "name": "prezent/crud-bundle",
+            "version": "0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Prezent/prezent-crud-bundle.git",
+                "reference": "3287514ea3f1a53816c41d5fd4fd3ab0b564647e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Prezent/prezent-crud-bundle/zipball/3287514ea3f1a53816c41d5fd4fd3ab0b564647e",
+                "reference": "3287514ea3f1a53816c41d5fd4fd3ab0b564647e",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "php": "^5.5|^7.0",
+                "prezent/grid-bundle": "^0.4.0",
+                "sensio/framework-extra-bundle": "^3.0",
+                "symfony/framework-bundle": "^2.6|^3.0",
+                "white-october/pagerfanta-bundle": "^1.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.5",
+                "symfony/form": "^2.6|^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prezent\\CrudBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Prezent Internet B.V.",
+                    "email": "github@prezent.nl"
+                },
+                {
+                    "name": "Sander Marechal",
+                    "email": "sander@prezent.nl"
+                }
+            ],
+            "description": "Easy CRUD for Symfony",
+            "homepage": "http://www.prezent.nl",
+            "keywords": [
+                "admin",
+                "crud",
+                "datagrid",
+                "grid"
+            ],
+            "time": "2016-12-07 09:52:17"
+        },
+        {
+            "name": "prezent/grid",
+            "version": "0.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Prezent/prezent-grid.git",
+                "reference": "c5a9cc248b7915bfe2dd96380d743dba30a72770"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Prezent/prezent-grid/zipball/c5a9cc248b7915bfe2dd96380d743dba30a72770",
+                "reference": "c5a9cc248b7915bfe2dd96380d743dba30a72770",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": "^5.5|^7.0",
+                "symfony/options-resolver": "~2.3|~3.0",
+                "symfony/property-access": "~2.3|~3.0",
+                "twig/extensions": "~1.2",
+                "twig/twig": "~1.23"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prezent\\Grid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Prezent Internet B.V.",
+                    "email": "github@prezent.nl"
+                },
+                {
+                    "name": "Sander Marechal",
+                    "email": "sander@prezent.nl"
+                }
+            ],
+            "description": "Generic data grids and lists",
+            "homepage": "http://www.prezent.nl",
+            "keywords": [
+                "datagrid",
+                "grid",
+                "list"
+            ],
+            "time": "2017-01-04 08:11:01"
+        },
+        {
+            "name": "prezent/grid-bundle",
+            "version": "0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Prezent/prezent-grid-bundle.git",
+                "reference": "1fb25f143efb117e7d73cba27685c692feade3da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Prezent/prezent-grid-bundle/zipball/1fb25f143efb117e7d73cba27685c692feade3da",
+                "reference": "1fb25f143efb117e7d73cba27685c692feade3da",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": "^5.5|^7.0",
+                "prezent/grid": ">=0.8 <0.10",
+                "symfony/framework-bundle": "~2.6|~3.0",
+                "symfony/translation": "~2.3|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0"
+            },
+            "suggest": {
+                "dms/twig-extension-bundle": "A bundle to automatically load the Twig Extensions into your application"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prezent\\GridBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Prezent Internet B.V.",
+                    "email": "github@prezent.nl"
+                },
+                {
+                    "name": "Sander Marechal",
+                    "email": "sander@prezent.nl"
+                }
+            ],
+            "description": "Generic data grids and lists using prezent-grid",
+            "homepage": "http://www.prezent.nl",
+            "keywords": [
+                "datagrid",
+                "grid",
+                "list",
+                "table"
+            ],
+            "time": "2016-10-19 15:05:56"
         },
         {
             "name": "psr/cache",
@@ -1045,7 +1553,7 @@
                 "psr",
                 "psr-6"
             ],
-            "time": "2016-08-06T20:24:11+00:00"
+            "time": "2016-08-06 20:24:11"
         },
         {
             "name": "psr/log",
@@ -1092,7 +1600,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1144,7 +1652,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2016-12-06T07:29:27+00:00"
+            "time": "2016-12-06 07:29:27"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1206,7 +1714,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2016-03-25T17:08:27+00:00"
+            "time": "2016-03-25 17:08:27"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -1250,7 +1758,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2016-09-23T18:09:57+00:00"
+            "time": "2016-09-23 18:09:57"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1303,7 +1811,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-11-24T01:01:23+00:00"
+            "time": "2016-11-24 01:01:23"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1363,7 +1871,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2016-11-15T15:54:07+00:00"
+            "time": "2016-11-15 15:54:07"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -1416,7 +1924,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-intl-icu",
@@ -1474,7 +1982,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1533,7 +2041,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-php56",
@@ -1589,7 +2097,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -1648,7 +2156,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-util",
@@ -1700,7 +2208,7 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -1759,7 +2267,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2016-10-27T17:59:30+00:00"
+            "time": "2016-10-27 17:59:30"
         },
         {
             "name": "symfony/symfony",
@@ -1901,7 +2409,59 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-12-13T13:20:15+00:00"
+            "time": "2016-12-13 13:20:15"
+        },
+        {
+            "name": "twig/extensions",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig-extensions.git",
+                "reference": "f0bb8431c8691f5a39f1017d9a5967a082bf01ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/f0bb8431c8691f5a39f1017d9a5967a082bf01ff",
+                "reference": "f0bb8431c8691f5a39f1017d9a5967a082bf01ff",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.20|~2.0"
+            },
+            "require-dev": {
+                "symfony/translation": "~2.3"
+            },
+            "suggest": {
+                "symfony/translation": "Allow the time_diff output to be translated"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_Extensions_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Common additional features for Twig that do not directly belong in core",
+            "homepage": "http://twig.sensiolabs.org/doc/extensions/index.html",
+            "keywords": [
+                "i18n",
+                "text"
+            ],
+            "time": "2016-10-25 17:34:14"
         },
         {
             "name": "twig/twig",
@@ -1962,7 +2522,166 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-23T18:41:40+00:00"
+            "time": "2016-11-23 18:41:40"
+        },
+        {
+            "name": "white-october/pagerfanta-bundle",
+            "version": "v1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
+                "reference": "f7e0fdf94a763a21a7c4c36ec9d9b5bcf4e12521"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/f7e0fdf94a763a21a7c4c36ec9d9b5bcf4e12521",
+                "reference": "f7e0fdf94a763a21a7c4c36ec9d9b5bcf4e12521",
+                "shasum": ""
+            },
+            "require": {
+                "pagerfanta/pagerfanta": "1.0.*",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/property-access": "~2.3|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7",
+                "symfony/symfony": "~2.3|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WhiteOctober\\PagerfantaBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com"
+                }
+            ],
+            "description": "Bundle to use Pagerfanta with Symfony2",
+            "keywords": [
+                "page",
+                "paging"
+            ],
+            "time": "2016-08-04 15:48:14"
+        },
+        {
+            "name": "zendframework/zend-code",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-code.git",
+                "reference": "2899c17f83a7207f2d7f53ec2f421204d3beea27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/2899c17f83a7207f2d7f53ec2f421204d3beea27",
+                "reference": "2899c17f83a7207f2d7f53ec2f421204d3beea27",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || 7.0.0 - 7.0.4 || ^7.0.6",
+                "zendframework/zend-eventmanager": "^2.6 || ^3.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "ext-phar": "*",
+                "phpunit/phpunit": "^4.8.21",
+                "squizlabs/php_codesniffer": "^2.5",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev",
+                    "dev-develop": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Code\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "homepage": "https://github.com/zendframework/zend-code",
+            "keywords": [
+                "code",
+                "zf2"
+            ],
+            "time": "2016-10-24 13:23:32"
+        },
+        {
+            "name": "zendframework/zend-eventmanager",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-eventmanager.git",
+                "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/c3bce7b7d47c54040b9ae51bc55491c72513b75d",
+                "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "^0.1",
+                "container-interop/container-interop": "^1.1.0",
+                "phpunit/phpunit": "^5.6",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
+            },
+            "suggest": {
+                "container-interop/container-interop": "^1.1.0, to use the lazy listeners feature",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev",
+                    "dev-develop": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\EventManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Trigger and listen to events within a PHP application",
+            "homepage": "https://github.com/zendframework/zend-eventmanager",
+            "keywords": [
+                "event",
+                "eventmanager",
+                "events",
+                "zf2"
+            ],
+            "time": "2016-12-19 21:47:12"
         }
     ],
     "packages-dev": [
@@ -2016,7 +2735,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2016-12-05T16:01:19+00:00"
+            "time": "2016-12-05 16:01:19"
         },
         {
             "name": "symfony/phpunit-bridge",
@@ -2074,19 +2793,18 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2016-12-12T13:31:08+00:00"
+            "time": "2016-12-12 13:31:08"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "friendsofsymfony/user-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.9"
     },
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "5.5.9"
-    }
+    "platform-dev": []
 }
