@@ -9,6 +9,7 @@ var gutil = require('gulp-util');
 var merge = require('merge-stream');
 var plumber = require('gulp-plumber');
 var prettify = require('pretty-hrtime');
+var rebase = require('gulp-css-rebase-urls');
 var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
@@ -17,27 +18,44 @@ var watchify = require('watchify');
 var path = require('path');
 
 // CSS resources
-var CSS = [
-    './web/bower/foundation/css/normalize.css',
-    './web/bower/font-awesome/css/font-awesome.css',
-    './web/bundles/flobfoundation/css/foundationtosymfony.css',
-    './app/Resources/assets/css/app.scss',
-    './web/bower/jquery.ui/themes/base/all.css'
-];
+var CSS = {
+    'app.css': [
+        './assets/vendor/foundation/css/normalize.css',
+        './assets/vendor/font-awesome/css/font-awesome.css',
+        './web/bundles/flobfoundation/css/foundationtosymfony.css',
+        './vendor/prezent/grid-bundle/Resources/public/css/prezent-grid.css',
+        './app/Resources/assets/css/app.scss',
+        './assets/vendor/jquery.ui/themes/base/all.css',
+        './assets/vendor/bzm-range-slider/dist/bzm-range-slider.css',
+        './vendor/a2lix/translation-form-bundle/A2lix/TranslationFormBundle/Resources/public/css/a2lix_translation_default.css'
+    ],
+};
 
 // Javascript libraries (from e.g. bower)
 var JS_LIBS = [
-    './web/bower/jquery/dist/jquery.js',
-    './web/bower/fastclick/lib/fastclick.js',
-    './web/bower/foundation/js/foundation/foundation.js',
-    './web/bower/foundation/js/foundation/foundation.topbar.js'
+    './assets/vendor/jquery/dist/jquery.js',
+    // './assets/vendor/fastclick/lib/fastclick.js',
+    './assets/vendor/jquery.ui/ui/core.js',
+    './assets/vendor/jquery.ui/ui/widget.js',
+    './assets/vendor/jquery.ui/ui/mouse.js',
+    './assets/vendor/jquery.ui/ui/sortable.js',
+    './assets/vendor/foundation/js/foundation/foundation.js',
+    './assets/vendor/foundation/js/foundation/foundation.alert.js',
+    './assets/vendor/foundation/js/foundation/foundation.topbar.js',
+    './assets/vendor/foundation/js/foundation/foundation.reveal.js',
+    './vendor/prezent/crud-bundle/src/Resources/public/js/crud.js',
+    './assets/vendor/foundation/js/foundation/foundation.equalizer.js',
+    './assets/vendor/foundation/js/foundation/foundation.slider.js',
+    './src/Prezent/CrudBundle/Resources/public/js/crud.js',
+    './vendor/a2lix/translation-form-bundle/A2lix/TranslationFormBundle/Resources/public/js/a2lix_translation_default.js',
 ];
 
 // Application javascripts
 var JS_APP = [
-    './app/Resources/assets/js/common.js'
+    './app/Resources/assets/js/common.js',
 ];
 
+// Compile modules using Browserify
 function bundle(b, file) {
     gutil.log('Bundling', gutil.colors.cyan(file));
     var start = process.hrtime();
@@ -51,21 +69,40 @@ function bundle(b, file) {
         .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
         .pipe(uglify({mangle: false, preserveComments: 'some'}))
         .pipe(sourcemaps.write('./maps')) // writes .map file
-        .pipe(gulp.dest('./HTML/js'))
+        .pipe(gulp.dest('./web/js'))
         .on('end', function() {
             gutil.log('Finished', gutil.colors.cyan(file), 'after', gutil.colors.magenta(prettify(process.hrtime(start))));
         });
 }
 
-gulp.task('css', function() {
-    return gulp.src(CSS)
+// Compile CSS
+function bundleCss(target, files) {
+    return gulp.src(files)
         .pipe(plumber())
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass().on('error', sass.logError))
+        .pipe(rebase({root: '/web/css'}))
         .pipe(cleanCss())
-        .pipe(concat('app.css'))
+        .pipe(concat(target))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./web/css'));
+};
+
+// Compile generic JS
+function bundleJs(target, files) {
+    return gulp.src(files)
+        .pipe(plumber())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(concat(target))
+        .pipe(uglify({mangle: false, preserveComments: 'some'}))
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('web/js'));
+}
+
+gulp.task('css', function () {
+    return merge(Object.keys(CSS).map(function (target) {
+        return bundleCss(target, CSS[target]);
+    }));
 });
 
 gulp.task('css-watch', function() {
@@ -73,22 +110,11 @@ gulp.task('css-watch', function() {
 });
 
 gulp.task('modernizr', function() {
-    return gulp.src('./web/bower/modernizr/modernizr.js')
-        .pipe(plumber())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(uglify({mangle: false, preserveComments: 'some'}))
-        .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('web/js'));
+    return bundleJs('modernizr.js', './assets/vendor/modernizr/modernizr.js');
 });
 
 gulp.task('libs', ['modernizr'], function() {
-    return gulp.src(JS_LIBS)
-        .pipe(plumber())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(concat('libs.js'))
-        .pipe(uglify({mangle: false, preserveComments: 'some'}))
-        .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('web/js'));
+    return bundleJs('libs.js', JS_LIBS);
 });
 
 gulp.task('js', function () {
@@ -100,8 +126,6 @@ gulp.task('js', function () {
 gulp.task('js-watch', function () {
     var tasks = JS_APP.map(function (file) {
         var b = watchify(browserify(file, {cache: {}, packageCache: {}, debug: true}), {poll: true});
-        b.on('update', bundle.bind(null, b, file));
-
         b.on('update', bundle.bind(null, b, file));
 
         return bundle(b, file);

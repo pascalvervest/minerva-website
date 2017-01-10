@@ -8,6 +8,7 @@
     "gulp-buffer": "0.0.2",
     "gulp-clean-css": "~2.0",
     "gulp-concat": "~2.5.2",
+    "gulp-css-rebase-urls": "~0.0.5",
     "gulp-plumber": "~1.0.1",
     "gulp-sass": "~2.3",
     "gulp-sourcemaps": "~1.6",
