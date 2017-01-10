@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('prezent_api');
+        $rootNode = $treeBuilder->root('minerva_app');
 
         return $treeBuilder;
     }
