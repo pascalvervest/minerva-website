@@ -1,15 +1,15 @@
 <?php
 
-namespace Minerva\AppBundle;
+namespace Minerva\AdminBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * MinervaAppBundle
+ * MinervaAdminBundle
  *
  * @author Pascal Vervest <pascalvervest@gmail.com>
  */
-class MinervaAppBundle extends Bundle
+class MinervaAdminBundle extends Bundle
 {
 
 }

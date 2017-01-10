@@ -4,3 +4,7 @@ fos_user:
 minerva_app:
   resource: "@MinervaAppBundle/Resources/config/routing.yml"
   prefix: /
+
+minerva_admin:
+  resource: "@MinervaAdminBundle/Resources/config/routing.yml"
+  prefix: /admin
