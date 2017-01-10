@@ -1,0 +1,22 @@
+{
+  "name": "minerva-website",
+  "version": "0.0.1",
+  "homepage": "http://minerva-website.dev",
+  "authors": [
+    "pascalvervest <pascalvervest@gmail.com>"
+  ],
+  "description": "Personal website",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "master",
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery": "2.2.4"
+  }
+}
