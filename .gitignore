@@ -22,3 +22,4 @@
 !var/logs/.gitkeep
 !var/cache/.gitkeep
 /vendor/
+/web/assets/
