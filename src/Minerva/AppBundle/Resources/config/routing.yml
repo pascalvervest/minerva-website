@@ -1,0 +1,4 @@
+minerva_app_index:
+  resource: "@MinervaAppBundle/Controller/IndexController.php"
+  prefix: /
+  type: annotation
