@@ -1,6 +1,6 @@
 <?php
 
-namespace Minerva\AppBundle\Entity;
+namespace Minerva\UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * User
  *
- * @author Pascal Vervest <pascalvervest@prezent.nl>
+ * @author Pascal Vervest <pascalvervest@gmail.com>
  *
  * @ORM\Entity
  * @ORM\Table(name="fos_user")

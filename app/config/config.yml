@@ -71,7 +71,7 @@ doctrine_migrations:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Minerva\AppBundle\Entity\User
+    user_class: Minerva\UserBundle\Entity\User
 
 # Swiftmailer Configuration
 swiftmailer:
