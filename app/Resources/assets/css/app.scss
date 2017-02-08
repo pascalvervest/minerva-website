@@ -1,22 +1,10 @@
 @charset "UTF-8";
 
 // Foundation
-@import "web/assets/vendor/foundation/scss/foundation/functions";
+//@import "web/assets/vendor/foundation-sites/scss/foundation";
+
 @import "colors";
 @import "settings";
-@import "web/assets/vendor/foundation/scss/foundation/components/alert-boxes";
-@import "web/assets/vendor/foundation/scss/foundation/components/block-grid";
-@import "web/assets/vendor/foundation/scss/foundation/components/buttons";
-@import "web/assets/vendor/foundation/scss/foundation/components/button-groups";
-@import "web/assets/vendor/foundation/scss/foundation/components/breadcrumbs";
-@import "web/assets/vendor/foundation/scss/foundation/components/forms";
-@import "web/assets/vendor/foundation/scss/foundation/components/grid";
-@import "web/assets/vendor/foundation/scss/foundation/components/pagination";
-@import "web/assets/vendor/foundation/scss/foundation/components/range-slider";
-@import "web/assets/vendor/foundation/scss/foundation/components/reveal";
-@import "web/assets/vendor/foundation/scss/foundation/components/tables";
-@import "web/assets/vendor/foundation/scss/foundation/components/top-bar";
-@import "web/assets/vendor/foundation/scss/foundation/components/type";
 
 // Layout
 @import "layout";

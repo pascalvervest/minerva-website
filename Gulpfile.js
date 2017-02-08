@@ -20,39 +20,36 @@ var path = require('path');
 // CSS resources
 var CSS = {
     'app.css': [
-        './assets/vendor/foundation/css/normalize.css',
-        './assets/vendor/font-awesome/css/font-awesome.css',
-        './web/bundles/flobfoundation/css/foundationtosymfony.css',
-        './vendor/prezent/grid-bundle/Resources/public/css/prezent-grid.css',
+        './web/assets/vendor/foundation-sites/assets/foundation.scss',
+        // './web/assets/vendor/foundation/css/normalize.css',
+        // './web/assets/vendor/font-awesome/css/font-awesome.css',
+        // './vendor/prezent/grid-bundle/Resources/public/css/prezent-grid.css',
         './app/Resources/assets/css/app.scss',
-        './assets/vendor/jquery.ui/themes/base/all.css',
-        './assets/vendor/bzm-range-slider/dist/bzm-range-slider.css',
-        './vendor/a2lix/translation-form-bundle/A2lix/TranslationFormBundle/Resources/public/css/a2lix_translation_default.css'
     ],
 };
 
 // Javascript libraries (from e.g. bower)
 var JS_LIBS = [
-    './assets/vendor/jquery/dist/jquery.js',
+    './web/assets/vendor/jquery/dist/jquery.js',
     // './assets/vendor/fastclick/lib/fastclick.js',
-    './assets/vendor/jquery.ui/ui/core.js',
-    './assets/vendor/jquery.ui/ui/widget.js',
-    './assets/vendor/jquery.ui/ui/mouse.js',
-    './assets/vendor/jquery.ui/ui/sortable.js',
-    './assets/vendor/foundation/js/foundation/foundation.js',
-    './assets/vendor/foundation/js/foundation/foundation.alert.js',
-    './assets/vendor/foundation/js/foundation/foundation.topbar.js',
-    './assets/vendor/foundation/js/foundation/foundation.reveal.js',
-    './vendor/prezent/crud-bundle/src/Resources/public/js/crud.js',
-    './assets/vendor/foundation/js/foundation/foundation.equalizer.js',
-    './assets/vendor/foundation/js/foundation/foundation.slider.js',
-    './src/Prezent/CrudBundle/Resources/public/js/crud.js',
-    './vendor/a2lix/translation-form-bundle/A2lix/TranslationFormBundle/Resources/public/js/a2lix_translation_default.js',
+    './web/assets/vendor/foundation-sites/dist/js/foundation.min.js',
+    // './assets/vendor/foundation/js/foundation/foundation.alert.js',
+    // './assets/vendor/foundation/js/foundation/foundation.topbar.js',
+    // './assets/vendor/foundation/js/foundation/foundation.reveal.js',
+    // './vendor/prezent/crud-bundle/src/Resources/public/js/crud.js',
+    // './assets/vendor/foundation/js/foundation/foundation.equalizer.js',
+    // './assets/vendor/foundation/js/foundation/foundation.slider.js',
+    // './src/Prezent/CrudBundle/Resources/public/js/crud.js',
+    // './vendor/a2lix/translation-form-bundle/A2lix/TranslationFormBundle/Resources/public/js/a2lix_translation_default.js',
 ];
 
 // Application javascripts
 var JS_APP = [
     './app/Resources/assets/js/common.js',
+];
+
+var JS_MODERNIZR = [
+    './web/assets/vendor/modernizr/modernizr.js',
 ];
 
 // Compile modules using Browserify
@@ -110,7 +107,7 @@ gulp.task('css-watch', function() {
 });
 
 gulp.task('modernizr', function() {
-    return bundleJs('modernizr.js', './assets/vendor/modernizr/modernizr.js');
+    return bundleJs('modernizr.js', JS_MODERNIZR);
 });
 
 gulp.task('libs', ['modernizr'], function() {

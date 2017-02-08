@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="{{ app.request.locale }}">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Minerva - Sylvanas WoW EU{% endblock %}</title>
+    <title>{% block title %}Minerva - Sylvanas{% endblock %}</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="/css/app.css" />
     {% endblock %}
@@ -12,9 +12,33 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
-<header>
 
-</header>
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="main-menu">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Minerva - Sylvanas</li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+            <li class="has-submenu">
+                <a href="#">Account</a>
+                <ul class="submenu menu vertical" data-submenu>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </li>
+            {#<li><a href="#"></a></li>#}
+            {#<li><a href="#">Three</a></li>#}
+        </ul>
+    </div>
+</div>
+
 <main>
     {% block body %}{% endblock %}
 </main>
