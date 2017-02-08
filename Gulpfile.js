@@ -21,7 +21,6 @@ var path = require('path');
 var CSS = {
     'app.css': [
         './web/assets/vendor/foundation-sites/assets/foundation.scss',
-        // './web/assets/vendor/foundation/css/normalize.css',
         // './web/assets/vendor/font-awesome/css/font-awesome.css',
         // './vendor/prezent/grid-bundle/Resources/public/css/prezent-grid.css',
         './app/Resources/assets/css/app.scss',
@@ -31,14 +30,7 @@ var CSS = {
 // Javascript libraries (from e.g. bower)
 var JS_LIBS = [
     './web/assets/vendor/jquery/dist/jquery.js',
-    // './assets/vendor/fastclick/lib/fastclick.js',
     './web/assets/vendor/foundation-sites/dist/js/foundation.min.js',
-    // './assets/vendor/foundation/js/foundation/foundation.alert.js',
-    // './assets/vendor/foundation/js/foundation/foundation.topbar.js',
-    // './assets/vendor/foundation/js/foundation/foundation.reveal.js',
-    // './vendor/prezent/crud-bundle/src/Resources/public/js/crud.js',
-    // './assets/vendor/foundation/js/foundation/foundation.equalizer.js',
-    // './assets/vendor/foundation/js/foundation/foundation.slider.js',
     // './src/Prezent/CrudBundle/Resources/public/js/crud.js',
     // './vendor/a2lix/translation-form-bundle/A2lix/TranslationFormBundle/Resources/public/js/a2lix_translation_default.js',
 ];
