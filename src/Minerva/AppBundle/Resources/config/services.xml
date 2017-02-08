@@ -10,7 +10,7 @@
             <argument type="service" id="translator" />
         </service>
 
-        <service id="minerva_admin.menu.account" class="Knp\Menu\MenuItem">
+        <service id="minerva_app.menu.account" class="Knp\Menu\MenuItem">
             <factory service="minerva_app.menu_builder" method="createAccountMenu" />
             <argument type="service" id="security.token_storage" />
             <argument type="service" id="security.authorization_checker" />
