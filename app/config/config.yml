@@ -72,6 +72,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Minerva\UserBundle\Entity\User
+    from_email:
+        address:        pascalvervest@gmail.com
+        sender_name:    Pascal Vervest
 
 # Swiftmailer Configuration
 swiftmailer:
