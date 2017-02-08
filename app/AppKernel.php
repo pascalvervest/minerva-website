@@ -16,7 +16,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Minerva\UserBundle\MinervaUserBundle(),
             new Minerva\AppBundle\MinervaAppBundle(),
             new Minerva\AdminBundle\MinervaAdminBundle(),
         ];
