@@ -51,7 +51,7 @@ class MenuBuilder
         if ($authorizationChecker->isGranted('ROLE_USER')) {
 
             $menu->addChild(
-                $tokenStorage->getToken()->getUsername(),
+                $this->translator->trans('layout.profile', [], 'FOSUserBundle'),
                 ['route' => 'fos_user_profile_show']
             );
 
