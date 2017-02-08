@@ -28,10 +28,7 @@
         <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
             <li class="has-submenu">
                 <a href="#">Account</a>
-                <ul class="submenu menu vertical" data-submenu>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
+                {{ knp_menu_render('account') }}
             </li>
             {#<li><a href="#"></a></li>#}
             {#<li><a href="#">Three</a></li>#}

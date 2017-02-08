@@ -3,5 +3,19 @@
 <container xmlns="http://symfony.com/schema/dic/services"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
 
+        <service id="minerva_app.menu_builder" class="Minerva\AppBundle\Menu\MenuBuilder">
+            <argument type="service" id="knp_menu.factory" />
+            <argument type="service" id="translator" />
+        </service>
+
+        <service id="minerva_admin.menu.account" class="Knp\Menu\MenuItem">
+            <factory service="minerva_app.menu_builder" method="createAccountMenu" />
+            <argument type="service" id="security.token_storage" />
+            <argument type="service" id="security.authorization_checker" />
+            <tag name="knp_menu.menu" alias="account" />
+        </service>
+
+    </services>
 </container>
