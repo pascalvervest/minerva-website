@@ -21,11 +21,6 @@
     </div>
 
     <div class="top-bar" id="main-menu">
-        {#<div class="top-bar-left">#}
-            {#<ul class="dropdown menu" data-dropdown-menu>#}
-                {#<li class="menu-text">Minerva - Sylvanas</li>#}
-            {#</ul>#}
-        {#</div>#}
         <div class="top-bar-right">
             <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
                 <li class="has-submenu">
@@ -36,18 +31,8 @@
         </div>
     </div>
 
-
-
-    <h1 class="headline"><img src="/images/header_shield.png" width="150" height="150"></h1>
+    <h1 class="headline"><a href="{{ path('minerva_app_index_index') }}"><img src="/images/header_shield.png" width="150" height="150"></a></h1>
     {{ knp_menu_render('main') }}
-
-    {#<ul class="header-subnav">#}
-        {#<li><a href="#" class="is-active">Roster</a></li>#}
-        {#<li><a href="#" class="right">About</a></li>#}
-        {#<li><a href="#" class="right">Progress</a></li>#}
-        {#<li><a target="_blank" href="http://zurb.com/responsive">Apply</a></li>#}
-        {#<li><a href="#" class="right">Twitch</a></li>#}
-    {#</ul>#}
 </header>
 
 <main>
@@ -71,7 +56,6 @@
     </div>
 </main>
 
-<!-- Footer -->
 <footer class="footer">
     <div class="row column full-width">
         <p>copyright &copy; 2017 minerva blablabla</p>
