@@ -55,9 +55,9 @@ function bundle(b, file) {
         })
         .pipe(source(path.basename(file)))
         .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
+        // .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
         .pipe(uglify({mangle: false, preserveComments: 'some'}))
-        .pipe(sourcemaps.write('./maps')) // writes .map file
+        // .pipe(sourcemaps.write('./maps')) // writes .map file
         .pipe(gulp.dest('./web/js'))
         .on('end', function() {
             gutil.log('Finished', gutil.colors.cyan(file), 'after', gutil.colors.magenta(prettify(process.hrtime(start))));
@@ -68,12 +68,12 @@ function bundle(b, file) {
 function bundleCss(target, files) {
     return gulp.src(files)
         .pipe(plumber())
-        .pipe(sourcemaps.init({loadMaps: true}))
+        // .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass().on('error', sass.logError))
         .pipe(rebase({root: '/web/css'}))
         .pipe(cleanCss())
         .pipe(concat(target))
-        .pipe(sourcemaps.write('./maps'))
+        // .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./web/css'));
 };
 
@@ -81,10 +81,10 @@ function bundleCss(target, files) {
 function bundleJs(target, files) {
     return gulp.src(files)
         .pipe(plumber())
-        .pipe(sourcemaps.init({loadMaps: true}))
+        // .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(concat(target))
         .pipe(uglify({mangle: false, preserveComments: 'some'}))
-        .pipe(sourcemaps.write('./maps'))
+        // .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('web/js'));
 }
 
