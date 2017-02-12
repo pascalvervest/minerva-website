@@ -13,29 +13,41 @@
 </head>
 <body>
 
-<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-    <button class="menu-icon" type="button" data-toggle></button>
-    <div class="title-bar-title">Menu</div>
-</div>
+<header class="header">
 
-<div class="top-bar" id="main-menu">
-    <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Minerva - Sylvanas</li>
-        </ul>
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
     </div>
-    <div class="top-bar-right">
-        <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-            <li class="has-submenu">
-                <a href="#">Account</a>
-                {{ knp_menu_render('account') }}
-            </li>
-        </ul>
+
+    <div class="top-bar" id="main-menu">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Minerva - Sylvanas</li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+                <li class="has-submenu">
+                    <a href="#">Account</a>
+                    {{ knp_menu_render('account') }}
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+
+    <h1 class="headline"></h1>
+    <ul class="header-subnav">
+        <li><a href="#" class="is-active">Roster</a></li>
+        <li><img src="/images/header_shield.png" width="150" height="150"></li>
+        <li><a target="_blank" href="http://zurb.com/responsive">apply</a></li>
+    </ul>
+</header>
 
 <main>
-    {% block body %}{% endblock %}
+    <div class="row mainContent">
+        <div class="large-8 large-offset-2 columns" style="background-color: red">{% block body %}{% endblock %}</div>
+    </div>
 </main>
 <footer>
 </footer>
