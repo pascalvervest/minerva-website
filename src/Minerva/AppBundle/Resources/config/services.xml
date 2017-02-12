@@ -17,5 +17,10 @@
             <tag name="knp_menu.menu" alias="account" />
         </service>
 
+        <service id="minerva_app.menu.main" class="Knp\Menu\MenuItem">
+            <factory service="minerva_app.menu_builder" method="createMainMenu" />
+            <tag name="knp_menu.menu" alias="main" />
+        </service>
+
     </services>
 </container>

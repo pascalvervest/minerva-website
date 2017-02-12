@@ -72,4 +72,41 @@ class MenuBuilder
 
         return $menu;
     }
+
+    /**
+     * Create main menu
+     *
+     * @return ItemInterface
+     */
+    public function createMainMenu()
+    {
+        $menu = $this->factory->createItem('root', ['childrenAttributes' => ['class' => 'header-subnav']]);
+
+        $menu->addChild(
+            'roster',
+            ['route' => 'minerva_app_content_roster']
+        );
+
+        $menu->addChild(
+            'about',
+            ['route' => 'minerva_app_content_about']
+        );
+
+        $menu->addChild(
+            'progress',
+            ['route' => 'minerva_app_content_progress']
+        );
+
+        $menu->addChild(
+            'apply',
+            ['route' => 'minerva_app_content_apply']
+        );
+
+        $menu->addChild(
+            'twitch',
+            ['route' => 'minerva_app_content_twitch']
+        );
+
+        return $menu;
+    }
 }

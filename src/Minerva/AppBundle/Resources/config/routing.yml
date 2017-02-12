@@ -2,3 +2,8 @@ minerva_app_index:
   resource: "@MinervaAppBundle/Controller/IndexController.php"
   prefix: /
   type: annotation
+
+minerva_app_content:
+  resource: "@MinervaAppBundle/Controller/ContentController.php"
+  prefix: /
+  type: annotation

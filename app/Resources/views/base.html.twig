@@ -36,14 +36,18 @@
         </div>
     </div>
 
+
+
     <h1 class="headline"><img src="/images/header_shield.png" width="150" height="150"></h1>
-    <ul class="header-subnav">
-        <li><a href="#" class="is-active">Roster</a></li>
-        <li><a href="#" class="right">About</a></li>
-        <li><a href="#" class="right">Progress</a></li>
-        <li><a target="_blank" href="http://zurb.com/responsive">Apply</a></li>
-        <li><a href="#" class="right">Twitch</a></li>
-    </ul>
+    {{ knp_menu_render('main') }}
+
+    {#<ul class="header-subnav">#}
+        {#<li><a href="#" class="is-active">Roster</a></li>#}
+        {#<li><a href="#" class="right">About</a></li>#}
+        {#<li><a href="#" class="right">Progress</a></li>#}
+        {#<li><a target="_blank" href="http://zurb.com/responsive">Apply</a></li>#}
+        {#<li><a href="#" class="right">Twitch</a></li>#}
+    {#</ul>#}
 </header>
 
 <main>
