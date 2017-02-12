@@ -5,7 +5,7 @@ body, html {
 
 .header {
   text-align: center;
-  background: $black; //$header-bg;
+  background: $header-bg;
   background-size: cover;
   position: relative;
   overflow: visible;
@@ -14,7 +14,7 @@ body, html {
 
   .headline {
     color: #ffe;
-    margin-bottom: 3rem;
+    padding-top: 2rem;
   }
 }
 
@@ -25,9 +25,7 @@ body, html {
   margin: 0 auto;
   bottom: 0;
   width: 100%;
-
   background-color: green;
-  height: 130px;
 
   li {
     float: none;
@@ -121,6 +119,27 @@ body, html {
 main {
   .mainContent {
     background-color: blue;
-    margin-top: 2rem;
   }
 }
+
+/** footer **/
+
+.full-width {
+  max-width: 1400px;
+}
+
+$text-color: #fff;
+
+// footer CSS
+
+.footer {
+  margin-top: 2rem;
+  background-color: $mine-shaft;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: $text-color;
+  i {
+    font-size: 100px;
+  }
+}
+

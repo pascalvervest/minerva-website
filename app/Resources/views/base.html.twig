@@ -21,11 +21,11 @@
     </div>
 
     <div class="top-bar" id="main-menu">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text">Minerva - Sylvanas</li>
-            </ul>
-        </div>
+        {#<div class="top-bar-left">#}
+            {#<ul class="dropdown menu" data-dropdown-menu>#}
+                {#<li class="menu-text">Minerva - Sylvanas</li>#}
+            {#</ul>#}
+        {#</div>#}
         <div class="top-bar-right">
             <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
                 <li class="has-submenu">
@@ -36,21 +36,49 @@
         </div>
     </div>
 
-    <h1 class="headline"></h1>
+    <h1 class="headline"><img src="/images/header_shield.png" width="150" height="150"></h1>
     <ul class="header-subnav">
         <li><a href="#" class="is-active">Roster</a></li>
-        <li><img src="/images/header_shield.png" width="150" height="150"></li>
-        <li><a target="_blank" href="http://zurb.com/responsive">apply</a></li>
+        <li><a href="#" class="right">About</a></li>
+        <li><a href="#" class="right">Progress</a></li>
+        <li><a target="_blank" href="http://zurb.com/responsive">Apply</a></li>
+        <li><a href="#" class="right">Twitch</a></li>
     </ul>
 </header>
 
 <main>
+    <div class="row">
+        <div class="large-12 columns" style="background-color: darkgoldenrod">
+            <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                    <li><a href="#0">Home</a></li>
+                    <li><a href="#0">Some page</a></li>
+                    <li class="disabled">disabled</li>
+                    <li>
+                        <span class="show-for-sr">Current: </span> Current page
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <div class="row mainContent">
         <div class="large-8 large-offset-2 columns" style="background-color: red">{% block body %}{% endblock %}</div>
     </div>
 </main>
-<footer>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="row column full-width">
+        <p>copyright &copy; 2017 minerva blablabla</p>
+    </div>
+    <div class="row full-width">
+        <div class="column large-4">something</div>
+        <div class="column large-4">over</div>
+        <div class="column large-4">here</div>
+    </div>
 </footer>
+
 {% block javascripts %}
     <script src="/js/libs.js"></script>
     <script src="/js/common.js"></script>
