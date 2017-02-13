@@ -1,6 +1,5 @@
 body, html {
-  background-color: $white; //$black;
-  //color:
+  background-color: $white;
 }
 
 .header {
@@ -9,7 +8,7 @@ body, html {
   background-size: cover;
   position: relative;
   overflow: visible;
-  padding-top: 0; //$header-height;
+  padding-top: 0;
   padding-bottom: $header-height + ($subnav-link-padding * 2 + $subnav-font-size - 0.15rem);
 
   .headline {
@@ -25,7 +24,7 @@ body, html {
   margin: 0 auto;
   bottom: 0;
   width: 100%;
-  background-color: green;
+  background-color: #222222;
 
   li {
     float: none;
@@ -52,8 +51,6 @@ body, html {
     }
   }
 }
-
-
 
 .title-bar {
   background: $menu-background;
@@ -117,12 +114,27 @@ body, html {
 }
 
 main {
+
+  background: url('../../../../web/images/background.png') no-repeat top center;
+  background-color: $black;
+  padding-top: 1em;
+
   .mainContent {
-    background-color: blue;
+
+
+    .content {
+      background-color: $black;
+      border: 1px solid #444444;
+      color: #666666;
+    }
+
+    .sidebar {
+      background-color: $black;
+      border: 1px solid #444444;
+      color: #666666;
+    }
   }
 }
-
-/** footer **/
 
 .full-width {
   max-width: 1400px;
@@ -130,10 +142,7 @@ main {
 
 $text-color: #fff;
 
-// footer CSS
-
 .footer {
-  margin-top: 2rem;
   background-color: $mine-shaft;
   padding: 2rem 4rem;
   text-align: center;
@@ -143,3 +152,18 @@ $text-color: #fff;
   }
 }
 
+.breadBar {
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  background-color: $black;
+  border: 1px solid #444;
+
+  .breadcrumbs {
+    margin: 0;
+
+    li {
+      color: green;
+    }
+  }
+}
