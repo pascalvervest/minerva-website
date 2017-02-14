@@ -140,12 +140,24 @@ main {
 $text-color: #fff;
 
 .footer {
-  background-color: $mine-shaft;
-  padding: 2rem 4rem;
-  text-align: center;
-  color: $text-color;
-  i {
-    font-size: 100px;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: $black;
+
+  .row {
+    .columns {
+      background-color: $black;
+      border: 1px solid #444444;
+      text-align: center;
+
+      color: #444444;
+      text-transform: uppercase;
+      display: block;
+      font-weight: bold;
+      font-size: 0.7em;
+      letter-spacing: 1px;
+    }
   }
 }
 
