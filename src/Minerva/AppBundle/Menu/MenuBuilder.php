@@ -45,30 +45,50 @@ class MenuBuilder
     public function createAccountMenu(
         TokenStorageInterface $tokenStorage,
         AuthorizationCheckerInterface $authorizationChecker
-    ) {
-        $menu = $this->factory->createItem('root', ['childrenAttributes' => ['class' => 'submenu menu vertical']]);
+    )
+    {
 
+        $menu = $this->factory->createItem('root', [
+            'childrenAttributes' => [
+                'class' => 'vertical medium-horizontal menu',
+                'data-responsive-menu' => 'drilldown medium-dropdown',
+            ],
+        ]);
+
+        // Create main node
+        $accountMenu = $this->factory->createItem(
+            $this->translator->trans('layout.account', [], 'FOSUserBundle'),
+            [
+                'childrenAttributes' => ['class' => 'submenu menu vertical'],
+                'uri' => '#'
+            ]
+        );
+
+        // Add menu items according to current state
         if ($authorizationChecker->isGranted('ROLE_USER')) {
 
-            $menu->addChild(
+            $accountMenu->addChild(
                 $this->translator->trans('layout.profile', [], 'FOSUserBundle'),
                 ['route' => 'fos_user_profile_show']
             );
 
-            $menu->addChild(
+            $accountMenu->addChild(
                 $this->translator->trans('layout.logout', [], 'FOSUserBundle'),
                 ['route' => 'fos_user_security_logout']
             );
         } else {
-            $menu->addChild(
+            $accountMenu->addChild(
                 $this->translator->trans('layout.register', [], 'FOSUserBundle'),
                 ['route' => 'fos_user_registration_register']
             );
-            $menu->addChild(
+            $accountMenu->addChild(
                 $this->translator->trans('layout.login', [], 'FOSUserBundle'),
                 ['route' => 'fos_user_security_login']
             );
         }
+
+        // Add account menu
+        $menu->addChild($accountMenu, ['uri' => '/']);
 
         return $menu;
     }
@@ -80,7 +100,9 @@ class MenuBuilder
      */
     public function createMainMenu()
     {
-        $menu = $this->factory->createItem('root', ['childrenAttributes' => ['class' => 'header-subnav']]);
+        $menu = $this->factory->createItem('root', [
+            'childrenAttributes' => ['class' => 'vertical medium-horizontal menu']
+        ]);
 
         $menu->addChild(
             'roster',

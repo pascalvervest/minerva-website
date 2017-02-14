@@ -14,25 +14,23 @@
 <body>
 
 <header class="header">
+    <h1 class="headline"><a href="{{ path('minerva_app_index_index') }}"><img src="/images/header_shield.png" width="150" height="150"></a></h1>
 
-    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
         <div class="title-bar-title">Menu</div>
     </div>
 
-    <div class="top-bar" id="main-menu">
-        <div class="top-bar-right">
-            <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-                <li class="has-submenu">
-                    <a href="#">Account</a>
-                    {{ knp_menu_render('account') }}
-                </li>
-            </ul>
+    <nav class="top-bar" id="nav-menu">
+        <div class="row large-12 columns navigation">
+            <div class="top-bar-left">
+                {{ knp_menu_render('main') }}
+            </div>
+            <div class="top-bar-right">
+                {{ knp_menu_render('account') }}
+            </div>
         </div>
-    </div>
-
-    <h1 class="headline"><a href="{{ path('minerva_app_index_index') }}"><img src="/images/header_shield.png" width="150" height="150"></a></h1>
-    {{ knp_menu_render('main') }}
+    </nav>
 </header>
 
 <main>
