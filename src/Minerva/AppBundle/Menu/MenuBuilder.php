@@ -57,7 +57,7 @@ class MenuBuilder
 
         // Create main node
         $accountMenu = $this->factory->createItem(
-            $this->translator->trans('layout.account', [], 'FOSUserBundle'),
+            $this->translator->trans('navigation.account.account', [], 'MinervaAppBundle'),
             [
                 'childrenAttributes' => ['class' => 'submenu menu vertical'],
                 'uri' => '#'
@@ -105,27 +105,27 @@ class MenuBuilder
         ]);
 
         $menu->addChild(
-            'roster',
+            $this->translator->trans('navigation.main.roster', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_roster']
         );
 
         $menu->addChild(
-            'about',
+            $this->translator->trans('navigation.main.about', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_about']
         );
 
         $menu->addChild(
-            'progress',
+            $this->translator->trans('navigation.main.progress', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_progress']
         );
 
         $menu->addChild(
-            'apply',
+            $this->translator->trans('navigation.main.apply', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_apply']
         );
 
         $menu->addChild(
-            'twitch',
+            $this->translator->trans('navigation.main.twitch', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_twitch']
         );
 

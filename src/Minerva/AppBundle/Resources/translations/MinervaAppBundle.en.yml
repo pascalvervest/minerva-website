@@ -1,0 +1,9 @@
+navigation:
+  main:
+    roster: "roster"
+    about: "about"
+    progress: "progress"
+    apply: "apply"
+    twitch: "twitch"
+  account:
+    account: "Account"
