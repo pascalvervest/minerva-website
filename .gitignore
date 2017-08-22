@@ -1,3 +1,4 @@
+.idea
 /app/bootstrap.php.cache
 /app/config/apache2.conf
 /app/config/build.yml
