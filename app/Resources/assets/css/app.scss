@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 // Foundation
-//@import "web/assets/vendor/foundation-sites/scss/foundation";
+@import "foundation";
+@import 'settings/foundation';
 
-@import "colors";
-@import "settings";
+@include foundation-everything;
 
-// Layout
-@import "layout";
+@import 'settings/colors';
+@import 'settings/app';
+@import 'layout';

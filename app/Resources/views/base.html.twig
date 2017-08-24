@@ -8,60 +8,68 @@
     {% block stylesheets %}
         <link rel="stylesheet" href="/css/app.css" />
     {% endblock %}
-    <script src="/js/modernizr.js"></script>
+    {#<script src="/js/modernizr.js"></script>#}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
 
+<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+</div>
+
 <header class="header">
     <h1 class="headline"><a href="{{ path('minerva_app_index_index') }}"><img src="/images/header_shield.png" width="150" height="150"></a></h1>
 
-    <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-    </div>
+    <div class="grid-x main-menu">
+        <div class="cell">
 
-    <nav class="top-bar" id="nav-menu">
-        <div class="row large-12 columns navigation">
-            <div class="top-bar-left">
-                {{ knp_menu_render('main') }}
-            </div>
-            <div class="top-bar-right">
-                {{ knp_menu_render('account') }}
+            <div class="grid-container">
+                <div class="top-bar" id="example-menu">
+                    <div class="top-bar-left">
+                        {{ knp_menu_render('main') }}
+                    </div>
+                    <div class="top-bar-right">
+                        {{ knp_menu_render('account') }}
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 </header>
 
 <main>
-    <div class="row breadBar">
-        <div class="large-12 columns">
-            <nav aria-label="You are here:" role="navigation">
-                <ul class="breadcrumbs">
-                    <li><a href="#0">Home</a></li>
-                    <li><a href="#0">Some page</a></li>
-                    <li class="disabled">disabled</li>
-                    <li>
-                        <span class="show-for-sr">Current: </span> Current page
-                    </li>
-                </ul>
-            </nav>
+    <div class="grid-container">
+        <div class="grid-x breadBar">
+            <div class="cell">
+                <nav aria-label="You are here:" role="navigation">
+                    <ul class="breadcrumbs">
+                        <li><a href="#0">Home</a></li>
+                        <li><a href="#0">Some page</a></li>
+                        <li class="disabled">disabled</li>
+                        <li>
+                            <span class="show-for-sr">Current: </span> Current page
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-
-    <div class="row mainContent">
-        <div class="large-8 columns content">{% block body %}{% endblock %}</div>
-        <div class="large-3 large-offset-1 columns sidebar">
-            <h2>Random</h2>
-            <p>Some random stuff here? Maybe the account you're logged in with, including avatar, or for officers pending applications, stuff like that</p>
+        <div class="grid-x mainContent">
+            <div class="large-8 cell content">{% block body %}{% endblock %}</div>
+            <div class="large-3 large-offset-1 cell sidebar">
+                <h2>Random</h2>
+                <p>Some random stuff here? Maybe the account you're logged in with, including avatar, or for officers pending applications, stuff like that</p>
+            </div>
         </div>
     </div>
 </main>
 
 <footer class="footer">
-    <div class="row">
-        <div class="large-12 columns">
-            copyright &copy; 2017 - <a href="https://www.minerva-sylvanas.com">www.minerva-sylvanas.com</a>
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell">
+                copyright &copy; 2017 - <a href="https://www.minerva-sylvanas.com">www.minerva-sylvanas.com</a>
+            </div>
         </div>
     </div>
 </footer>

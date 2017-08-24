@@ -20,7 +20,7 @@ var path = require('path');
 // CSS resources
 var CSS = {
     'app.css': [
-        './web/assets/vendor/foundation-sites/assets/foundation.scss',
+        //'./web/assets/vendor/foundation-sites/scss/foundation.scss',
         // './web/assets/vendor/font-awesome/css/font-awesome.css',
         // './vendor/prezent/grid-bundle/Resources/public/css/prezent-grid.css',
         './app/Resources/assets/css/app.scss',
@@ -69,7 +69,9 @@ function bundleCss(target, files) {
     return gulp.src(files)
         .pipe(plumber())
         // .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            includePaths: ['web/assets/vendor/foundation-sites/scss']
+        }).on('error', sass.logError))
         .pipe(rebase({root: '/web/css'}))
         .pipe(cleanCss())
         .pipe(concat(target))

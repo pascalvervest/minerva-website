@@ -1,3 +1,9 @@
+/**
+ * Main defining stylesheet
+ *
+ * @author Pascal Vervest <pascalvervest@gmail.com>
+ */
+
 body, html {
   background-color: $black;
 }
@@ -14,37 +20,34 @@ body, html {
     color: #ffe;
     padding-top: 2rem;
   }
-}
 
-.title-bar {
-  background: $menu-background;
-  padding: 0.9rem;
-}
-
-.title-bar {
-  padding: 0 .5rem;
-}
-
-.menu-icon,
-.title-bar-title {
-  position: relative;
-  top: 10px;
-}
-
-.top-bar {
-  padding: 0;
-
-  .navigation {
-    padding-left: 0;
-    padding-right: 0;
+  .main-menu {
+    background-color: $menu-background;
   }
 }
+//
+//.title-bar {
+//  background: $menu-background;
+//  padding: 0.9rem;
+//}
+////
+////.title-bar {
+////  padding: 0 .5rem;
+////}
+////
+////.menu-icon,
+////.title-bar-title {
+////  position: relative;
+////  top: 10px;
+////}
+////
 
 /* Medium-Up Navigation */
 @media only screen and (min-width: 40rem) {
 
   .top-bar {
     background: $menu-background;
+    padding: 0;
 
     ul {
       background: $menu-background;
@@ -75,42 +78,24 @@ body, html {
       }
     }
   }
-
-  // Right part
-  .top-bar-right {
-    width: 50%;
-
-    ul {
-      float: left;
-    }
-  }
-
-  // Left part
-  .top-bar-left {
-    width:  50%;
-
-    ul {
-      float: right;
-    }
-  }
 }
-
-.dropdown.menu .submenu {
-  border: none;
-}
-
-.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
-  border-color: #fff transparent transparent;
-}
-
-.is-drilldown-submenu-parent>a::after {
-  border-color: transparent transparent transparent #fff;
-}
-
-.js-drilldown-back::before {
-  border-color: transparent #fff transparent transparent;
-}
-
+////
+////.dropdown.menu .submenu {
+////  border: none;
+////}
+////
+////.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
+////  border-color: #fff transparent transparent;
+////}
+////
+////.is-drilldown-submenu-parent>a::after {
+////  border-color: transparent transparent transparent #fff;
+////}
+////
+////.js-drilldown-back::before {
+////  border-color: transparent #fff transparent transparent;
+////}
+////
 main {
 
   background: url('../../../../web/images/background.png') no-repeat top center;
@@ -118,6 +103,10 @@ main {
   padding-top: 1em;
 
   .mainContent {
+
+    .cell {
+      padding: 0 1em 0 1em;
+    }
 
     .content {
       background-color: $black;
@@ -132,35 +121,25 @@ main {
     }
   }
 }
-
-.full-width {
-  max-width: 1400px;
-}
-
-$text-color: #fff;
-
 .footer {
 
   padding-top: 1em;
   padding-bottom: 1em;
   background-color: $black;
 
-  .row {
-    .columns {
-      background-color: $black;
-      border: 1px solid #444444;
-      text-align: center;
+  .grid-container > .grid-x {
+    border: 1px solid #444;
+    background-color: $black;
+    text-align: center;
 
-      color: #444444;
-      text-transform: uppercase;
-      display: block;
-      font-weight: bold;
-      font-size: 0.7em;
-      letter-spacing: 1px;
-    }
+    color: #444444;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    font-size: 0.7em;
+    letter-spacing: 1px;
   }
 }
-
 .breadBar {
   margin-top: 0;
   margin-bottom: 1em;

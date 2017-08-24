@@ -65,8 +65,8 @@
     </target>
 
     <target name="-prepare-executables" depends="set-env">
-        <chmod mode="0755" file="${ws}/bin/gulp" />
-        <chmod mode="0755" file="${ws}/bin/mustache" />
+        <!--<chmod mode="0755" file="${ws}/bin/gulp" />-->
+        <!--<chmod mode="0755" file="${ws}/bin/mustache" />-->
     </target>
     <!-- }}} -->
 
@@ -101,9 +101,9 @@
     -->
 
     <!-- Migrate database -->
-    <!--<target name="migrate">-->
-        <!--<exec command="${ws}/bin/console doctrine:migrations:migrate &#45;&#45;no-interaction" passthru="true" />-->
-    <!--</target>-->
+    <target name="migrate">
+        <exec command="php ${ws}/bin/console doctrine:migrations:migrate --no-interaction" passthru="true" />
+    </target>
 
     <!-- }}} -->
 
@@ -126,7 +126,8 @@
     </target>
 
     <target name="gulp" description="Build assets with Gulp" depends="-prepare,npm,-prepare-executables">
-        <exec command="${ws}/bin/gulp" passthru="true" />
+        <!--<exec command="npm ${ws}/bin/gulp" passthru="true" />-->
+        <exec command="gulp" passthru="true" />
     </target>
 
     <!-- }}} -->
@@ -154,13 +155,13 @@
     <target name="empty-all-cache" description="Empty all caches" depends="empty-symfony-cache,empty-doctrine-cache"/>
 
     <target name="empty-symfony-cache" description="Empty the symfony cache">
-        <exec command="${ws}/bin/console cache:clear" passthru="true" />
+        <exec command="php ${ws}/bin/console cache:clear" passthru="true" />
     </target>
 
     <target name="empty-doctrine-cache" description="Empty the doctrine cache">
-        <exec command="${ws}/bin/console doctrine:cache:clear-metadata" passthru="true" />
-        <exec command="${ws}/bin/console doctrine:cache:clear-query" passthru="true" />
-        <exec command="${ws}/bin/console doctrine:cache:clear-result" passthru="true" />
+        <exec command="php ${ws}/bin/console doctrine:cache:clear-metadata" passthru="true" />
+        <exec command="php ${ws}/bin/console doctrine:cache:clear-query" passthru="true" />
+        <exec command="php ${ws}/bin/console doctrine:cache:clear-result" passthru="true" />
     </target>
 
     <!-- }}} -->
