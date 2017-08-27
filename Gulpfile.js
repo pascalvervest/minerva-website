@@ -20,8 +20,7 @@ var path = require('path');
 // CSS resources
 var CSS = {
     'app.css': [
-        //'./web/assets/vendor/foundation-sites/scss/foundation.scss',
-        // './web/assets/vendor/font-awesome/css/font-awesome.css',
+        './web/assets/vendor/font-awesome/css/font-awesome.css',
         // './vendor/prezent/grid-bundle/Resources/public/css/prezent-grid.css',
         './app/Resources/assets/css/app.scss',
     ],
