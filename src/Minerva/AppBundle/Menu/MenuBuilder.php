@@ -105,6 +105,11 @@ class MenuBuilder
         ]);
 
         $menu->addChild(
+            $this->translator->trans('navigation.main.bio', [], 'MinervaAppBundle'),
+            ['route' => 'minerva_app_content_bio']
+        );
+
+        $menu->addChild(
             $this->translator->trans('navigation.main.roster', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_roster']
         );

@@ -76,4 +76,16 @@ class ContentController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/bio", name="minerva_app_content_bio")
+     * @Template
+     *
+     * @param Request $request
+     * @return array
+     */
+    public function bioAction(Request $request)
+    {
+        return [];
+    }
 }
