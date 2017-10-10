@@ -25,27 +25,11 @@ body, html {
     background-color: $menu-background;
   }
 }
-//
-//.title-bar {
-//  background: $menu-background;
-//  padding: 0.9rem;
-//}
-////
-////.title-bar {
-////  padding: 0 .5rem;
-////}
-////
-////.menu-icon,
-////.title-bar-title {
-////  position: relative;
-////  top: 10px;
-////}
-////
 
 /* Medium-Up Navigation */
 @media only screen and (min-width: 40rem) {
 
-  .top-bar {
+  .profile-navigation, .top-bar {
     background: $menu-background;
     padding: 0;
 
@@ -79,23 +63,7 @@ body, html {
     }
   }
 }
-////
-////.dropdown.menu .submenu {
-////  border: none;
-////}
-////
-////.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
-////  border-color: #fff transparent transparent;
-////}
-////
-////.is-drilldown-submenu-parent>a::after {
-////  border-color: transparent transparent transparent #fff;
-////}
-////
-////.js-drilldown-back::before {
-////  border-color: transparent #fff transparent transparent;
-////}
-////
+
 main {
 
   background: url('../../../../web/images/background.png') no-repeat top center;
@@ -105,7 +73,7 @@ main {
   .mainContent {
 
     .cell {
-      padding: 0 1em 0 1em;
+      //padding: 0 1em 0 1em;
     }
 
     .content {
@@ -118,6 +86,10 @@ main {
       background-color: $black;
       border: 1px solid #444444;
       color: #666666;
+    }
+
+    .profile-content {
+      padding: 0 1em 0 1em;
     }
   }
 }
@@ -156,3 +128,6 @@ main {
   }
 }
 
+label {
+  color: $label-color;
+}
