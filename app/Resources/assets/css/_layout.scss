@@ -72,14 +72,11 @@ main {
 
   .mainContent {
 
-    .cell {
-      //padding: 0 1em 0 1em;
-    }
-
     .content {
       background-color: $black;
       border: 1px solid #444444;
       color: #666666;
+      padding: 1em;
     }
 
     .sidebar {
@@ -121,6 +118,7 @@ main {
 
   .breadcrumbs {
     margin: 0;
+    padding-left: 1em;
 
     li {
       color: green;

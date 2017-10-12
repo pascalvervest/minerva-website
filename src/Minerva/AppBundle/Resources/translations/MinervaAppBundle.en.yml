@@ -1,3 +1,20 @@
+application:
+  entity:
+    name: "Name"
+    age: "Age"
+    location: "Location"
+    charactername: "Character name"
+    class: "Class"
+    armory: "Armory link"
+    battletag: "Battlenet Tag"
+    mainspec: "Main specialization"
+    offspec: "Second specialization/offspec"
+    gametime: "How much do you play?"
+    communication: "Are you willing to use voice communication like Discord?"
+    criticism: "How do you handle criticism?"
+    effort: "How much effort are you willing to put in?"
+    availability: "When are you available for raiding?"
+
 navigation:
   account:
     account: "Account"
@@ -8,3 +25,9 @@ navigation:
     progress: "progress"
     roster: "roster"
     twitch: "twitch"
+  pagetitles:
+    apply: "Guild application"
+  profile:
+    main: Main
+    battlenet: Battle.net
+

@@ -1,7 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Minerva\AppBundle\Controller;
 
+use Minerva\AppBundle\Entity\Application;
+use Minerva\AppBundle\Form\ApplicationType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -20,11 +24,8 @@ class ContentController extends Controller
     /**
      * @Route("/roster", name="minerva_app_content_roster")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function rosterAction(Request $request)
+    public function rosterAction(Request $request): array
     {
         return [];
     }
@@ -32,11 +33,8 @@ class ContentController extends Controller
     /**
      * @Route("/about", name="minerva_app_content_about")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function aboutAction(Request $request)
+    public function aboutAction(Request $request): array
     {
         return [];
     }
@@ -44,11 +42,8 @@ class ContentController extends Controller
     /**
      * @Route("/progress", name="minerva_app_content_progress")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function progressAction(Request $request)
+    public function progressAction(Request $request): array
     {
         return [];
     }
@@ -56,23 +51,37 @@ class ContentController extends Controller
     /**
      * @Route("/apply", name="minerva_app_content_apply")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function applyAction(Request $request)
+    public function applyAction(Request $request): array
     {
-        return [];
+        /** @var Application $application */
+        $application = new Application();
+
+        /** @var ApplicationType $form */
+        $form = $this->createForm(ApplicationType::class, $application);
+
+        // Handle form submission
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $application = $form->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($application);
+            $em->flush();
+        }
+
+        return [
+            'form' => $form->createView(),
+        ];
     }
 
     /**
      * @Route("/twitch", name="minerva_app_content_twitch")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function twitchAction(Request $request)
+    public function twitchAction(Request $request): array
     {
         return [];
     }
@@ -80,12 +89,10 @@ class ContentController extends Controller
     /**
      * @Route("/bio", name="minerva_app_content_bio")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function bioAction(Request $request)
+    public function bioAction(Request $request): array
     {
         return [];
     }
 }
+
