@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Minerva\AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -20,11 +22,8 @@ class IndexController extends Controller
     /**
      * @Route("/", name="minerva_app_index_index")
      * @Template
-     *
-     * @param Request $request
-     * @return array
      */
-    public function indexAction(Request $request)
+    public function indexAction(Request $request): array
     {
         return [];
     }

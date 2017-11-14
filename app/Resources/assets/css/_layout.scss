@@ -5,20 +5,18 @@
  */
 
 body, html {
-  background-color: $black;
+  background-color: $mine-shaft;
 }
 
-.header {
-  text-align: center;
-  background: $header-bg;
-  background-size: cover;
-  position: relative;
-  overflow: visible;
-  padding-top: 0;
-
-  .headline {
-    color: #ffe;
-    padding-top: 2rem;
+header {
+  h1.headline {
+    height: 170px;
+    width: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url('../../../../web/images/banner3.png') no-repeat top center;
+    margin-bottom: 0;
   }
 
   .main-menu {
@@ -66,41 +64,48 @@ body, html {
 
 main {
 
-  background: url('../../../../web/images/background.png') no-repeat top center;
+  background: url('../../../../web/images/background_blur.png') no-repeat top center;
   background-color: $black;
   padding-top: 1em;
+  padding-bottom: 2em;
 
   .mainContent {
 
-    .content {
+    h2 {
+      font-family: 'Catamaran', sans-serif;
+    }
+
+    p {
+      font-family: 'Catamaran', sans-serif;
+    }
+
+    > div {
       background-color: $black;
       border: 1px solid #444444;
       color: #666666;
       padding: 1em;
     }
-
-    .sidebar {
-      background-color: $black;
-      border: 1px solid #444444;
-      color: #666666;
-    }
-
-    .profile-content {
-      padding: 0 1em 0 1em;
-    }
   }
 }
-.footer {
 
-  padding-top: 1em;
-  padding-bottom: 1em;
+.footer {
+  padding-top: 2em;
   background-color: $black;
 
-  .grid-container > .grid-x {
-    border: 1px solid #444;
-    background-color: $black;
-    text-align: center;
+  .grid-container {
+    .footer-navigation {
+      h2 {
+        color: $white;
+        text-transform: uppercase;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+      }
+    }
+  }
 
+  .grid-container > .grid-x.copyright{
+    border: 1px solid #444;
+    text-align: center;
     color: #444444;
     text-transform: uppercase;
     display: block;
@@ -108,7 +113,10 @@ main {
     font-size: 0.7em;
     letter-spacing: 1px;
   }
+
+  margin-bottom: 2em;
 }
+
 .breadBar {
   margin-top: 0;
   margin-bottom: 1em;

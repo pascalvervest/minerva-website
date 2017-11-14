@@ -98,10 +98,13 @@ class MenuBuilder
      *
      * @return ItemInterface
      */
-    public function createMainMenu()
+    public function createMainMenu(string $position = 'main')
     {
+        /** @var string $menuClasses */
+        $menuClasses = $position === 'main' ? 'vertical medium-horizontal menu' : '';
+
         $menu = $this->factory->createItem('root', [
-            'childrenAttributes' => ['class' => 'vertical medium-horizontal menu']
+            'childrenAttributes' => ['class' => $menuClasses]
         ]);
 
         $menu->addChild(
@@ -132,6 +135,30 @@ class MenuBuilder
         $menu->addChild(
             $this->translator->trans('navigation.main.twitch', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_twitch']
+        );
+
+        return $menu;
+    }
+
+    /**
+     * Create profile page menu
+     *
+     * @return ItemInterface
+     */
+    public function createProfileMenu()
+    {
+        $menu = $this->factory->createItem('root', [
+            'childrenAttributes' => ['class' => 'vertical medium-horizontal menu']
+        ]);
+
+        $menu->addChild(
+            $this->translator->trans('navigation.profile.main', [], 'MinervaAppBundle'),
+            ['route' => 'fos_user_profile_show']
+        );
+
+        $menu->addChild(
+            $this->translator->trans('navigation.profile.battlenet', [], 'MinervaAppBundle'),
+            ['route' => 'minerva_user_battlenet_overview']
         );
 
         return $menu;
