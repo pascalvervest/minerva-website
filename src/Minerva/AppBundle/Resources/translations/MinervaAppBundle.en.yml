@@ -19,10 +19,11 @@ navigation:
   account:
     account: "Account"
   main:
-    home: "home"
     about: "about"
     apply: "apply"
+    archive: "archive"
     bio: "biography"
+    home: "home"
     progress: "progress"
     roster: "roster"
     stream: "stream"

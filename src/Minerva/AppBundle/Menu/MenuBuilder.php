@@ -142,6 +142,11 @@ class MenuBuilder
             ['route' => 'minerva_app_content_stream']
         );
 
+        $menu->addChild(
+            $this->translator->trans('navigation.main.archive', [], 'MinervaAppBundle'),
+            ['route' => 'minerva_app_content_archive']
+        );
+
         return $menu;
     }
 

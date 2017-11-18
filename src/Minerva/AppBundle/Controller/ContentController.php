@@ -94,5 +94,14 @@ class ContentController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/archive", name="minerva_app_content_archive")
+     * @Template
+     */
+    public function archiveAction(Request $request): array
+    {
+        return [];
+    }
 }
 
