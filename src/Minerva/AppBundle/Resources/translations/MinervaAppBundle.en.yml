@@ -19,6 +19,7 @@ navigation:
   account:
     account: "Account"
   main:
+    home: "home"
     about: "about"
     apply: "apply"
     bio: "biography"
