@@ -127,10 +127,10 @@ class MenuBuilder
 //            ['route' => 'minerva_app_content_progress']
 //        );
 
-        $menu->addChild(
-            $this->translator->trans('navigation.main.apply', [], 'MinervaAppBundle'),
-            ['route' => 'minerva_app_content_apply']
-        );
+//        $menu->addChild(
+//            $this->translator->trans('navigation.main.apply', [], 'MinervaAppBundle'),
+//            ['route' => 'minerva_app_content_apply']
+//        );
 
         $menu->addChild(
             $this->translator->trans('navigation.main.stream', [], 'MinervaAppBundle'),
