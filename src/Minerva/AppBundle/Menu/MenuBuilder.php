@@ -112,20 +112,20 @@ class MenuBuilder
             ['route' => 'minerva_app_content_bio']
         );
 
-        $menu->addChild(
-            $this->translator->trans('navigation.main.roster', [], 'MinervaAppBundle'),
-            ['route' => 'minerva_app_content_roster']
-        );
+//        $menu->addChild(
+//            $this->translator->trans('navigation.main.roster', [], 'MinervaAppBundle'),
+//            ['route' => 'minerva_app_content_roster']
+//        );
 
-        $menu->addChild(
-            $this->translator->trans('navigation.main.about', [], 'MinervaAppBundle'),
-            ['route' => 'minerva_app_content_about']
-        );
+//        $menu->addChild(
+//            $this->translator->trans('navigation.main.about', [], 'MinervaAppBundle'),
+//            ['route' => 'minerva_app_content_about']
+//        );
 
-        $menu->addChild(
-            $this->translator->trans('navigation.main.progress', [], 'MinervaAppBundle'),
-            ['route' => 'minerva_app_content_progress']
-        );
+//        $menu->addChild(
+//            $this->translator->trans('navigation.main.progress', [], 'MinervaAppBundle'),
+//            ['route' => 'minerva_app_content_progress']
+//        );
 
         $menu->addChild(
             $this->translator->trans('navigation.main.apply', [], 'MinervaAppBundle'),
@@ -133,8 +133,8 @@ class MenuBuilder
         );
 
         $menu->addChild(
-            $this->translator->trans('navigation.main.twitch', [], 'MinervaAppBundle'),
-            ['route' => 'minerva_app_content_twitch']
+            $this->translator->trans('navigation.main.stream', [], 'MinervaAppBundle'),
+            ['route' => 'minerva_app_content_stream']
         );
 
         return $menu;

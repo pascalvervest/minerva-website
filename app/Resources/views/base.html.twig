@@ -31,9 +31,9 @@
                     <div class="top-bar-left">
                         {{ knp_menu_render('main') }}
                     </div>
-                    <div class="top-bar-right">
-                        {{ knp_menu_render('account') }}
-                    </div>
+                    {#<div class="top-bar-right">#}
+                        {#{{ knp_menu_render('account') }}#}
+                    {#</div>#}
                 </div>
             </div>
         </div>
@@ -42,20 +42,20 @@
 
 <main>
     <div class="grid-container">
-        <div class="grid-x breadBar">
-            <div class="cell">
-                <nav aria-label="You are here:" role="navigation">
-                    <ul class="breadcrumbs">
-                        <li><a href="#0">Home</a></li>
-                        <li><a href="#0">Some page</a></li>
-                        <li class="disabled">disabled</li>
-                        <li>
-                            <span class="show-for-sr">Current: </span> Current page
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        {#<div class="grid-x breadBar">#}
+            {#<div class="cell">#}
+                {#<nav aria-label="You are here:" role="navigation">#}
+                    {#<ul class="breadcrumbs">#}
+                        {#<li><a href="#0">Home</a></li>#}
+                        {#<li><a href="#0">Some page</a></li>#}
+                        {#<li class="disabled">disabled</li>#}
+                        {#<li>#}
+                            {#<span class="show-for-sr">Current: </span> Current page#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</nav>#}
+            {#</div>#}
+        {#</div>#}
         <div class="grid-x mainContent">
             <div class="large-8 cell content">{% block body %}{% endblock %}</div>
             <div class="large-3 large-offset-1 cell sidebar">
@@ -69,12 +69,12 @@
 <footer class="footer">
     <div class="grid-container">
 
-        <div class="grid-x footer-navigation">
-            <div class="small-3"><h2>Navigation</h2>{{ knp_menu_render('main') }}</div>
-            <div class="small-3"><h2>Armory</h2></div>
-            <div class="small-3"></div>
-            <div class="small-3"><h2>Contact</h2></div>
-        </div>
+        {#<div class="grid-x footer-navigation">#}
+            {#<div class="small-3"><h2>Navigation</h2>{{ knp_menu_render('main') }}</div>#}
+            {#<div class="small-3"><h2>Armory</h2></div>#}
+            {#<div class="small-3"></div>#}
+            {#<div class="small-3"><h2>Contact</h2></div>#}
+        {#</div>#}
 
         <div class="grid-x copyright">
             <div class="cell">

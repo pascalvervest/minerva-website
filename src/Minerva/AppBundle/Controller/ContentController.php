@@ -78,10 +78,10 @@ class ContentController extends Controller
     }
 
     /**
-     * @Route("/twitch", name="minerva_app_content_twitch")
+     * @Route("/stream", name="minerva_app_content_stream")
      * @Template
      */
-    public function twitchAction(Request $request): array
+    public function streamAction(Request $request): array
     {
         return [];
     }

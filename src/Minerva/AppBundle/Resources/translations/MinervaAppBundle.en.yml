@@ -21,10 +21,10 @@ navigation:
   main:
     about: "about"
     apply: "apply"
-    bio: "bio"
+    bio: "biography"
     progress: "progress"
     roster: "roster"
-    twitch: "twitch"
+    stream: "stream"
   pagetitles:
     apply: "Guild application"
   profile:
