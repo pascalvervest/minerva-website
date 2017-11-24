@@ -23,6 +23,7 @@ navigation:
     apply: "apply"
     archive: "archive"
     bio: "biography"
+    donate: "donate"
     home: "home"
     progress: "progress"
     roster: "roster"
