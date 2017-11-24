@@ -143,6 +143,11 @@ class MenuBuilder
         );
 
         $menu->addChild(
+            $this->translator->trans('navigation.main.donate', [], 'MinervaAppBundle'),
+            ['route' => 'minerva_app_content_donate']
+        );
+
+        $menu->addChild(
             $this->translator->trans('navigation.main.archive', [], 'MinervaAppBundle'),
             ['route' => 'minerva_app_content_archive']
         );

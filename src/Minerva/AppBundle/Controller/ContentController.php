@@ -103,5 +103,17 @@ class ContentController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/donate", name="minerva_app_content_donate")
+     * @Template
+     */
+    public function donateAction(): array
+    {
+        header("Location: https://uk.virginmoneygiving.com/Team/Minerva");
+        die();
+
+        return [];
+    }
 }
 
